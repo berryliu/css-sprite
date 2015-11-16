@@ -1,0 +1,27 @@
+{
+  "name": "css-sprite",
+  "version": "1.0.0",
+  "description": "combine images and modify CSS correspondingly ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berryliu/css-sprite.git"
+  },
+  "keywords": [
+    "sprite",
+    "css",
+    "honey"
+  ],
+  "author": "berryliu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/berryliu/css-sprite/issues"
+  },
+  "homepage": "https://github.com/berryliu/css-sprite#readme",
+  "dependencies": {
+    "images": "2.1.10"
+  }
+}
