@@ -18,12 +18,15 @@ exports.registerPlugin = function (silky, options) {
     silky.registerHook('build:willCompress', {
         async: true
     }, function (data, done) {
+
         // 处理 css
         if (/\.css$/i.test(data.relativePath)) {
             var res = parser(data);
-            var content = res.content;
             if (res.map && res.map.length > 0) {
-                var css = image(data, 1, res.map)
+                var content = res.content,
+                    css = image(data, 1, res.map);
+
+                // 拼接内容，写文件
                 content = content + css;
                 fs.writeFileSync(data.path, content, 'utf-8');
             }
@@ -31,5 +34,4 @@ exports.registerPlugin = function (silky, options) {
 
         return done(null);
     });
-
 };
